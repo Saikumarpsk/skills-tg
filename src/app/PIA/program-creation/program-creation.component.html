@@ -1,0 +1,483 @@
+<main class="mt-4">
+    <section>
+        <div class="container-fluid">
+            <div class="card mb-4">
+                <div class="card-header bg-transparent">
+                    <div class="d-flex align-items-center justify-content-between flex-wrap">
+                        <div>
+                            <h6 class="mb-2 mb-sm-0">Create Program Creation</h6>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#addLocation">Add New Location</button>
+                            <a class="btn btn-default ms-3" id="iconChange" data-bs-toggle="collapse" href="#collapseExample"  aria-expanded="false" aria-controls="collapseExample">
+                                <span class="bi bi-chevron-down"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body collapse" id="collapseExample">
+                    <form>
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="form-floating mb-3">
+                                    <select class="form-select">
+                                      <option selected>Select Type Of Activity</option>
+                                      <option value="1">Activity</option>
+                                    </select>
+                                    <label>Type Of Activity</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="form-floating mb-3">
+                                    <select class="form-select">
+                                      <option selected>Select Sub Activity</option>
+                                      <option value="1">Activity</option>
+                                    </select>
+                                    <label>Sub Activity</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="form-floating mb-3">
+                                    <select class="form-select">
+                                      <option selected>Select Type Of Program</option>
+                                      <option value="1">Program</option>
+                                    </select>
+                                    <label>Type Of Program</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="form-floating mb-3">
+                                    <select class="form-select">
+                                      <option selected>Select Program Details</option>
+                                      <option value="1">details</option>
+                                    </select>
+                                    <label>Program Details</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" placeholder="Title Of Program">
+                                    <label>Title Of Program</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" placeholder="No. Of Days">
+                                    <label>No. Of Days</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="form-floating mb-3">
+                                    <input type="date" class="form-control">
+                                    <label>Start Date</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="form-floating mb-3">
+                                    <input type="time" class="form-control">
+                                    <label>In Time</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="form-floating mb-3">
+                                    <input type="time" class="form-control">
+                                    <label>Out Time</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" placeholder="">
+                                    <label>SPOC Name</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" placeholder="">
+                                    <label>SPOC Contact No.</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="form-floating mb-3">
+                                    <select class="form-select">
+                                        <option selected>Select Location</option>
+                                        <option value="1">Hyderabad</option>
+                                      </select>
+                                    <label>Program Location</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header bg-transparent">
+                    <div class="d-flex align-items-center justify-content-between flex-wrap">
+                        <div>
+                            <h6 class="fw-600 mb-2 mb-sm-0">Add Session</h6>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-lime-green" data-bs-toggle="modal" data-bs-target="#addResource">Add New Resource Person</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <table id="creation-table" class="table table-borderless table-striped nowrap">
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Date</th>
+                                <th>Start Time</th>
+                                <th>End Time</th>
+                                <th>Type Of Session</th>
+                                <th>Methodology</th>
+                                <th>Session Details</th>
+                                <th>Resource Person</th>
+                                <th>Type Of Material Used</th>
+                                <th>Upload</th>
+                                <th>Add/Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-start">1</td>
+                                <td>
+                                    <input type="date" class="form-control" placeholder="">
+                                </td>
+                                <td>
+                                    <input type="time" class="form-control" placeholder="">
+                                </td>
+                                <td>
+                                    <input type="time" class="form-control" placeholder="">
+                                </td>
+                                <td>
+                                    <select class="form-select">
+                                        <option value="#">Select Type</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select class="form-select">
+                                        <option value="#">Select Methodology</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" placeholder="Session Details">
+                                </td>
+                                <td>
+                                    <select class="form-select">
+                                        <option value="#">Select Resource Person</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select class="form-select">
+                                        <option value="#">Select Type</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input class="form-control" type="file" id="formFile">
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-default btn-sm text-lime-green">
+                                        <span class="bi bi-plus-lg"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-default btn-sm text-danger ms-2">
+                                        <span class="bi bi-trash"></span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-start">2</td>
+                                <td>
+                                    <input type="date" class="form-control" placeholder="">
+                                </td>
+                                <td>
+                                    <input type="time" class="form-control" placeholder="">
+                                </td>
+                                <td>
+                                    <input type="time" class="form-control" placeholder="">
+                                </td>
+                                <td>
+                                    <select class="form-select">
+                                        <option value="#">Select Type</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select class="form-select">
+                                        <option value="#">Select Methodology</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" placeholder="Session Details">
+                                </td>
+                                <td>
+                                    <select class="form-select">
+                                        <option value="#">Select Resource Person</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select class="form-select">
+                                        <option value="#">Select Type</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input class="form-control" type="file" id="formFile">
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-default btn-sm text-lime-green">
+                                        <span class="bi bi-plus-lg"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-default btn-sm text-danger ms-2">
+                                        <span class="bi bi-trash"></span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-start">2</td>
+                                <td>
+                                    <input type="date" class="form-control" placeholder="">
+                                </td>
+                                <td>
+                                    <input type="time" class="form-control" placeholder="">
+                                </td>
+                                <td>
+                                    <input type="time" class="form-control" placeholder="">
+                                </td>
+                                <td>
+                                    <select class="form-select">
+                                        <option value="#">Select Type</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select class="form-select">
+                                        <option value="#">Select Methodology</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" placeholder="Session Details">
+                                </td>
+                                <td>
+                                    <select class="form-select">
+                                        <option value="#">Select Resource Person</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select class="form-select">
+                                        <option value="#">Select Type</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input class="form-control" type="file" id="formFile">
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-default btn-sm text-lime-green">
+                                        <span class="bi bi-plus-lg"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-default btn-sm text-danger ms-2">
+                                        <span class="bi bi-trash"></span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-start">2</td>
+                                <td>
+                                    <input type="date" class="form-control" placeholder="">
+                                </td>
+                                <td>
+                                    <input type="time" class="form-control" placeholder="">
+                                </td>
+                                <td>
+                                    <input type="time" class="form-control" placeholder="">
+                                </td>
+                                <td>
+                                    <select class="form-select">
+                                        <option value="#">Select Type</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select class="form-select">
+                                        <option value="#">Select Methodology</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" placeholder="Session Details">
+                                </td>
+                                <td>
+                                    <select class="form-select">
+                                        <option value="#">Select Resource Person</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select class="form-select">
+                                        <option value="#">Select Type</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input class="form-control" type="file" id="formFile">
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-default btn-sm text-lime-green">
+                                        <span class="bi bi-plus-lg"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-default btn-sm text-danger ms-2">
+                                        <span class="bi bi-trash"></span>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="text-end mb-3">
+                <button type="button" class="btn btn-secondary">Save For Later</button>
+                <button type="button" class="btn btn-lime-green ms-3">Submit</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- begin:: modal add new location -->
+<div class="modal fade" id="addLocation" tabindex="-1" aria-labelledby="addLocationLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+            <div class="modal-header py-2">
+                <h6 class="modal-title" id="addLocationLabel">Add New Location</h6>
+                <button type="button" class="btn-close me-1" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="mb-3">
+                            <label class="form-label fs-md fw-600">Location Co-ordinates</label>
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="Latitude">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="Longitutde">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="mb-3">
+                            <label class="form-label fs-md fw-600">Google Map Location URL</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="mb-3">
+                            <label class="form-label fs-md fw-600">Type Of Ownership</label>
+                            <div class="row">
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ownFacility" value="option1">
+                                        <label class="form-check-label fs-md" for="ownFacility">Own Facility</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="leasedFacility" value="option2">
+                                        <label class="form-check-label fs-md" for="leasedFacility">Leased Facility</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-6">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="rentActivity" value="option2">
+                                        <label class="form-check-label fs-md" for="rentActivity">Rented for the activity</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="mb-3">
+                            <label class="form-label fs-md fw-600">Type Of Venue</label>
+                            <div class="row">
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="checkbox1" value="option1">
+                                        <label class="form-check-label fs-md" for="checkbox1">Training Facility</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="checkbox2" value="option2">
+                                        <label class="form-check-label fs-md" for="checkbox2">Conference Facility</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="checkbox3" value="option2">
+                                        <label class="form-check-label fs-md" for="checkbox3">Convention Center</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="checkbox4" value="option2">
+                                        <label class="form-check-label fs-md" for="checkbox4">Function Hall</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="checkbox5" value="option2">
+                                        <label class="form-check-label fs-md" for="checkbox5">Open Ground</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="others" value="option2">
+                                        <label class="form-check-label fs-md" for="others">Others</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="show-other mt-3 none-d">
+                                <input type="text" class="form-control" placeholder="Other Details">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="mb-3">
+                            <label class="form-label fs-md fw-600">Max Capacity</label>
+                            <input type="text" class="form-control" placeholder="Max capacity">
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="mb-3">
+                            <label class="form-label fs-md fw-600">Pictures Of Facility</label>
+                            <input type="file" class="form-control" placeholder="Max capacity">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-end">
+                    <button type="button" class="btn btn-lime-green">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end:: modal add new location -->
+
+<!-- begin:: modal add new resource person -->
+<div class="modal fade" id="addResource" tabindex="-1" aria-labelledby="addResourceLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header py-2">
+                <h6 class="modal-title" id="addResourceLabel">Add New Resource Person</h6>
+                <button type="button" class="btn-close me-1" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" placeholder="Resource Person">
+                    <label>Resource Person</label>
+                </div>
+
+                <div class="text-end">
+                    <button type="button" class="btn btn-lime-green">Add Resource Person</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end:: modal add new resource person -->
