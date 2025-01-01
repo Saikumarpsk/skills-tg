@@ -1,2 +1,2 @@
-# skill-development-role-based-authorization-example
+# skill-development-poc-application
 
