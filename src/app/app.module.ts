@@ -23,6 +23,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { PasswordSettingsComponent } from './password-settings/password-settings.component';
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
 import { ProgramCreationComponent } from './PIA/program-creation/program-creation.component';
+import { AddParticipantDataComponent } from './PIA/add-participant-data/add-participant-data.component';
+import { VeiwProgramCreationComponent } from './PIA/veiw-program-creation/veiw-program-creation.component';
+import { UpdateProgramExecutionComponent } from './PIA/update-program-execution/update-program-execution.component';
 
 @NgModule({
     imports: [
@@ -49,7 +52,10 @@ import { ProgramCreationComponent } from './PIA/program-creation/program-creatio
         ProfileComponent,
         PasswordSettingsComponent,
         UserRegistrationComponent,
-        ProgramCreationComponent,        
+        ProgramCreationComponent,
+        AddParticipantDataComponent,
+        VeiwProgramCreationComponent,
+        UpdateProgramExecutionComponent,        
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

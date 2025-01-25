@@ -10,6 +10,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { PasswordSettingsComponent } from './password-settings/password-settings.component';
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
 import { ProgramCreationComponent } from './PIA/program-creation/program-creation.component';
+import { VeiwProgramCreationComponent } from './PIA/veiw-program-creation/veiw-program-creation.component';
+import { AddParticipantDataComponent } from './PIA/add-participant-data/add-participant-data.component';
+import { UpdateProgramExecutionComponent } from './PIA/update-program-execution/update-program-execution.component';
 
 const routes: Routes = [
     {
@@ -45,7 +48,25 @@ const routes: Routes = [
         path: 'program-creation',
         component: ProgramCreationComponent,
         canActivate: [AuthGuard],
-        data: { roles: [Role.Admin] }
+        data: { roles: [Role.Admin,Role.User] }
+    },
+    {
+        path: 'veiw-program-creation',
+        component: VeiwProgramCreationComponent,
+        canActivate: [AuthGuard],
+        data: { roles: [Role.Admin,Role.User] }
+    },
+    {
+        path: 'add-participant-data',
+        component: AddParticipantDataComponent,
+        canActivate: [AuthGuard],
+        data: { roles: [Role.Admin,Role.User] }
+    },
+    {
+        path: 'update-program-execution',
+        component: UpdateProgramExecutionComponent,
+        canActivate: [AuthGuard],
+        data: { roles: [Role.Admin,Role.User] }
     },
     {
         path: 'login',
